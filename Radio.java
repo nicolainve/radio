@@ -31,8 +31,8 @@ class Radio {
     return new Radio(this);
   }
 
-  public String getStatus() {
-    return isOn ? "La radio è accesa" : "La radio è spenta";
+  public boolean getStatus() {
+    return isOn ? true : false;
   }
 
   public int getVolume() {

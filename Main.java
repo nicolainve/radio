@@ -10,12 +10,14 @@ class Main {
 
     do {
       System.out.println("1. Accendi la radio");
-      System.out.println("2. Spegni la radio");
-      System.out.println("3. Imposta il volume");
-      System.out.println("4. Cambia il volume");
-      System.out.println("5. Seleziona il canale");
-      System.out.println("6. Cambia il canale");
-      System.out.println("7. Stato radio");
+      if (r1.getStatus()) {
+        System.out.println("2. Spegni la radio");
+        System.out.println("3. Imposta il volume");
+        System.out.println("4. Cambia il volume");
+        System.out.println("5. Seleziona il canale");
+        System.out.println("6. Cambia il canale");
+        System.out.println("7. Stato radio");
+      }
       System.out.println("0. Esci");
       System.out.print("\nScegli un'opzione: ");
 
