@@ -5,6 +5,7 @@ class Main {
 
     Scanner scanner = new Scanner(System.in);
     Radio r1 = new Radio();
+    Radio r2 = null;
 
     int choice;
 
@@ -17,6 +18,10 @@ class Main {
         System.out.println("5. Seleziona il canale");
         System.out.println("6. Cambia il canale");
         System.out.println("7. Stato radio");
+        System.out.println("8. Crea una copia");
+        if (r2 != null) {
+          System.out.println("9. Confronta le radio");
+        }
       }
       System.out.println("0. Esci");
       System.out.print("\nScegli un'opzione: ");
@@ -80,6 +85,17 @@ class Main {
         case 7:
           System.out.println("\n" + r1 + "\n");
           break;
+
+        case 8:
+          r2 = new Radio(r1);
+          System.out.println("\n" + r2 + "\n");
+
+        case 9:
+          if (r1.equals(r2)) {
+            System.out.println("\nLe due radio sono uguali\n");
+          } else {
+            System.out.println("\nLe due radio sono diverse\n");
+          }
       }
     } while (choice != 0);
 
