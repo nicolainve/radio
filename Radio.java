@@ -35,12 +35,12 @@ class Radio {
     return isOn ? "La radio è accesa" : "La radio è spenta";
   }
 
-  public String getVolume() {
-    return "Il volume è al " + volume + "%";
+  public int getVolume() {
+    return volume;
   }
 
-  public String getChannel() {
-    return "Il canale è " + channel + "MHz";
+  public float getChannel() {
+    return channel;
   }
 
   public void powerOn() {
@@ -51,41 +51,29 @@ class Radio {
     isOn = false;
   }
 
-  public String setVolume(int volume) {
+  public void setVolume(int volume) {
     if (volume > minVolume && volume < maxVolume) {
       this.volume = volume;
-      return "Il volume è al " + this.volume;
-    } else {
-      return "Imposta un volume tra 0 e 100%";
     }
   }
 
-  public String changeVolume(int volume) {
+  public void changeVolume(int volume) {
     int delta = this.volume + volume;
     if (delta > minVolume && delta < maxVolume) {
       this.volume = delta;
-      return "Il volume è al " + this.volume;
-    } else {
-      return "Imposta un volume tra 0 e 100%";
     }
   }
 
-  public String setChannel(float channel) {
+  public void setChannel(float channel) {
     if (channel > minChannel && channel < maxChannel) {
       this.channel = channel;
-      return "Il canale è " + this.channel;
-    } else {
-      return "Seleziona un canale tra 87.5MHz e 108MHz";
     }
   }
 
-  public String changeChannel(float channel) {
+  public void changeChannel(float channel) {
     float delta = this.channel + channel;
     if (delta > minChannel && delta < maxChannel) {
       this.channel = delta;
-      return "Il canale è " + this.channel;
-    } else {
-      return "Seleziona un canale tra 87.5MHz e 108MHz";
     }
   }
 
