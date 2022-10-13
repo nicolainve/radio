@@ -28,13 +28,18 @@ class Main {
 
       choice = scanner.nextInt();
 
+      boolean oldStatus = r1.getStatus();
       int oldVolume = r1.getVolume();
       float oldChannel = r1.getChannel();
 
       switch (choice) {
         case 1:
           r1.powerOn();
-          System.out.println("\nLa radio è accesa\n");
+          if (oldStatus != r1.getStatus()) {
+            System.out.println("\nLa radio è accesa\n");
+          } else {
+            System.out.println("\nLa radio è già accesa\n");
+          }
           break;
 
         case 2:
