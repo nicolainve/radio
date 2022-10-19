@@ -18,13 +18,13 @@ class Radio {
   }
 
   public Radio(Radio r) {
-    this.isOn = r.isOn;
-    this.volume = r.volume;
-    this.minVolume = r.minVolume;
-    this.maxVolume = r.maxVolume;
-    this.channel = r.channel;
-    this.minChannel = r.minChannel;
-    this.maxChannel = r.maxChannel;
+    isOn = r.isOn;
+    volume = r.volume;
+    minVolume = r.minVolume;
+    maxVolume = r.maxVolume;
+    channel = r.channel;
+    minChannel = r.minChannel;
+    maxChannel = r.maxChannel;
   }
 
   public Radio copyMoto() {
@@ -83,6 +83,6 @@ class Radio {
   }
 
   public boolean equals(Radio r) {
-    return this.volume == r.volume && this.channel == r.channel;
+    return volume == r.volume && channel == r.channel;
   }
 }
